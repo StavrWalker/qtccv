@@ -33,35 +33,35 @@ wave._defaultThrottle = 99
 wave._defaultClipMode = 1
 wave._maxInterval = 1
 wave._isNewSystem = false
-if _HOST then
-	-- Redoing this, the correct and boring way, otherwise it doesn't work with versions above 1.100 until 1.800. - axisok
-	-- Likely to break only if CC:Tweaked changes how it writes versions.
-	local _matches = {}
-	for s in string.gmatch(_HOST, "%S+") do
-		_matches[#_matches + 1] = s
-	end
+-- if _HOST then
+	-- -- Redoing this, the correct and boring way, otherwise it doesn't work with versions above 1.100 until 1.800. - axisok
+	-- -- Likely to break only if CC:Tweaked changes how it writes versions.
+	-- local _matches = {}
+	-- for s in string.gmatch(_HOST, "%S+") do
+		-- _matches[#_matches + 1] = s
+	-- end
 
-	local _v = _matches[2]
-	_matches = {}
-	for s in string.gmatch(_v, "%P+") do
-		_matches[#_matches + 1] = s
-	end
+	-- local _v = _matches[2]
+	-- _matches = {}
+	-- for s in string.gmatch(_v, "%P+") do
+		-- _matches[#_matches + 1] = s
+	-- end
 
-	local _new = {1, 80}
-	wave._isNewSystem = true
-	for i=1, #_new, 1 do
-		if (i <= #_matches and _new[i] < tonumber(_matches[i])) then
-			break
+	-- local _new = {1, 80}
+	-- wave._isNewSystem = true
+	-- for i=1, #_new, 1 do
+		-- if (i <= #_matches and _new[i] < tonumber(_matches[i])) then
+			-- break
 
-		elseif (i <= #_matches and _new[i] > tonumber(_matches[i])) then
-			wave._isNewSystem = false
-			break
-		end
+		-- elseif (i <= #_matches and _new[i] > tonumber(_matches[i])) then
+			-- wave._isNewSystem = false
+			-- break
+		-- end
 
-	end
+	-- end
 
 
-end
+-- end
 
 wave.context = { }
 wave.output = { }
