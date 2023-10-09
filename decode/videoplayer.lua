@@ -169,7 +169,7 @@ if (audiofile and fs.exists(audiofile)) then
 		wc:addOutput(dir)
 		local t = wave.loadTrack(audiofile)
 		wc:addInstance(wave.createInstance(t))
-		
+		print("found speaker")
 	end
 
 end

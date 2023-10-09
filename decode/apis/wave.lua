@@ -289,7 +289,10 @@ end
 function wave.loadTrack(path)
 	local track = setmetatable({ }, {__index = wave.track})
 	local handle = fs.open(path, "rb")
-	if not handle then return end
+	if not handle then 
+		print("track not loaded")
+		return 
+	end
 
 	local function readInt(size)
 		local num = 0
