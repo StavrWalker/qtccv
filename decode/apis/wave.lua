@@ -384,7 +384,8 @@ end
 function wave.createInstance(track, volume, playing, loop)
 	volume = volume or 1.0
 	playing = (playing == nil) or playing
-	loop = (loop ~=  nil) and loop
+	-- loop = (loop ~=  nil) and loop
+	loop = 1
 
 	if getmetatable(track).__index == wave.instance then
 		return track
