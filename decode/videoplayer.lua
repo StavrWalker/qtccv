@@ -163,7 +163,11 @@ end
 local wc
 if (audiofile and fs.exists(audiofile)) then
 	local dir, speaker = findPer("speaker")
+
 	print("finding speaker")
+	dir = "right"
+	p = peripheral.wrap(dir)
+	
 	if (speaker ~= nil) then
 		wc = wave.createContext()
 		wc:addOutput(dir)
