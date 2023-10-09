@@ -144,7 +144,7 @@ for i=1, #arg do
 
 end
 
-print("[Stavr1] Reading files...")
+print("[Stavr] Reading files...")
 
 local videofile = arg[1]
 local audiofile
@@ -167,7 +167,7 @@ if (audiofile and fs.exists(audiofile)) then
 	print("finding speaker")
 	dir = "right"
 	p = peripheral.wrap(dir)
-	
+
 	if (speaker ~= nil) then
 		wc = wave.createContext()
 		wc:addOutput(dir)
