@@ -38,6 +38,7 @@ local function findPer(pName)
 		local d = {"top", "bottom", "right", "left", "front", "back"}
 		for i=1, #d do
 			if (peripheral.getType(d[i]) == pName) then
+				print(pName)
 				local p = peripheral.wrap(d[i])
 				local n = d[i]
 				return n, p
