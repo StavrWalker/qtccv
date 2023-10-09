@@ -144,7 +144,7 @@ for i=1, #arg do
 
 end
 
-print("[Stavr] Reading files...")
+print("[Stavr1] Reading files...")
 
 local videofile = arg[1]
 local audiofile
