@@ -144,7 +144,7 @@ for i=1, #arg do
 
 end
 
-print("[Stavr] Reading files...")
+print("[Stavr2] Reading files...")
 
 local videofile = arg[1]
 local audiofile
@@ -165,7 +165,7 @@ if (audiofile and fs.exists(audiofile)) then
 	local dir, speaker = findPer("speaker")
 
 	print("finding speaker")
-	dir = "right"
+	dir = "top"
 	p = peripheral.wrap(dir)
 
 	if (speaker ~= nil) then
